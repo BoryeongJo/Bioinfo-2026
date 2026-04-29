@@ -1,0 +1,273 @@
+    1  $ sudo apt install python3-pip
+    2  sudo apt install python3-pip
+    3  pip install gdown
+    4  gdown --folder https://drive.google.com/drive/folders/1bV7ZEQ7teiHHQuoYE4EtJs-Skxz0jC7-
+    5  cd BIOINFO1_UNIX_data
+    6  ls
+    7  -y
+    8  sudo apt update && sudo apt upgrade -y
+    9  ls
+   10  sudo apt install python3-pip
+   11  pip install gdown
+   12  # 1. pipx 설치
+   13  sudo apt update
+   14  sudo apt install pipx
+   15  # 2. 경로 등록 (한 번만 하면 됩니다)
+   16  pipx ensurepath
+   17  # 3. gdown 설치 (이제 전역에서 gdown 명령어를 쓸 수 있어요)
+   18  pipx install gdown
+   19  gdown --folder https://drive.google.com/drive/folders/1bV7ZEQ7teiHHQuoYE4EtJs-Skxz0jC7-
+   20  source ~/.bashrc
+   21  gdown --folder https://drive.google.com/drive/folders/1bV7ZEQ7teiHHQuoYE4EtJs-Skxz0jC7-
+   22  cd BIOINFO1_UNIX_data
+   23  mkdir -p commandline && tar -xvf commandline.tar.gz -C commandline
+   24  mkdir -p scripting && tar -xvf scripting.tar.gz -C scripting
+   25  ls
+   26  cd BIOINFO1_UNIX_data
+   27  ~
+   28  pwd
+   29  cd ..
+   30  cd BIOINFO1_UNIX_data
+   31  man ls
+   32  cd commandline
+   33  ls
+   34  ls -l C2.fastq 
+   35  cat gene-names 
+   36  head -4 C2.fastq 
+   37  less C2.fastq 
+   38  grep _B 3 TTCGA C2.fastq 
+   39  grep -B 3 TTCGA C2.fastq 
+   40  head -100 C2.fastq > C2-first100.fastq
+   41  wc -l C2-first100.fastq 
+   42  head -4 < C2-first100.fastq 
+   43  head -4 C2.fastq >> C@-headtail.fastq
+   44  cat C2-headtail.fastq
+   45  cat C@-headtail.fastq
+   46  tail -4 C2.fastq >> C@-headtail.fastq
+   47  cat C@-headtail.fastq
+   48  clear
+   49  cat C2.fastq | grep TGCTCC | wc -l
+   50  head -2404 C2.fastq | tail -4
+   51  cat C2.fastq  | grep TGCTCC |grep TTCTAA | ws -l
+   52  cat C2.fastq  | grep TGCTCC | grep TTCTAA | wc -l
+   53  head -30 gencode.gtf3
+   54  head -30 gendone.gtf3 | tail
+   55  head -30 gencode.gff.3
+   56  ls
+   57  head -30 gencode.gff3
+   58  grep -v '#' gencode.gff3 | cut -f 3 | head gene
+   59  grep -v '#' gencode.gff3 | cut -f 3 | head
+   60  grep -v '#' gencone.grr3 | cut -f 3 | sort | uniq -c | head
+   61  grep -v '#' gencode.gff3 | cut -f 3 | sort | uniq -c | head
+   62  grep DGCR8 gencode.gff3 | less 
+   63  grep DGCR8 gencode.gff3 | grep ID=exon | grep protein coding | less
+   64  grep DGCR8 gencode.gff3 | grep ID=exon | grep protein_coding | less
+   65  cd ..
+   66  cd scripting
+   67  cd shell2
+   68  grep '^#' Mus_musculus.GRCm38.75_chr1.gtf; grep -v '^#' Mus_musculus.GRM38.75_chr1.gtf | sort -k4,5nr) | head -7
+   69  (grep '^#' Mus_musculus.GRCm38.75_chr1.gtf; grep -v '^#' Mus_musculus.GRM38.75_chr1.gtf | sort -k4,5nr) | head -7
+   70  ls
+   71  cd scripting
+   72  ls
+   73  shell2
+   74  cd shell2
+   75  ./myscript.sh test.bam test.fasta test.index
+   76  ls -l myscript.sh
+   77  chmode u+x myscript.sh
+   78  chmod u+x myscript.sh
+   79  test "ATG" = "ATG"; echo $?
+   80  test "ATG" = "atg"; echo $?
+   81  cd ..
+   82  ls -1
+   83  pwd
+   84  mkdir -p rna_seq_lab && cd rna_seq_lab && python3 -m venv bio_env && source bio_env/bin/activate && pip install biopython geoparse pandas requests pydeseq2 streamlit plotly anndata
+   85  cd /home/jobor/BIOINFO1_UNIX_data
+   86  cd rna_seq_lab && source bio_env/bin/activate && pip list
+   87  source bio_env/bin/activate && python fetch_tp53.py
+   88  source bio_env/bin/activate && python fetch_tp53.py
+   89  source bio_env/bin/activate && python analyze_tp53.py
+   90  cd /home/jobor/BIOINFO1_UNIX_data/rna_seq_lab
+   91  mkdir -p rna_seq_lab && cd rna_seq_lab && python3 -m venv bio_env
+   92  source bio_env/bin/activate && pip install biopython pandas requests GEOparse pydeseq2 streamlit plotly
+   93  source bio_env/bin/activate && pip list
+   94  source bio_env/bin/activate && pip install GEOparse pandas anndata requests
+   95  source bio_env/bin/activate && python probe_gse52778.py
+   96  python -c "import pydeseq2; print(dir(pydeseq2))"
+   97  curl -s https://bioconnector.github.io/workshops/data/airway_metadata.csv | head -n 5
+   98  source bio_env/bin/activate && python download_and_prep_gse52778.py
+   99  source bio_env/bin/activate && pip install pydeseq2
+  100  source bio_env/bin/activate && python run_pydeseq2.py
+  101  source bio_env/bin/activate && pip install streamlit plotly seaborn matplotlib
+  102  source bio_env/bin/activate && streamlit run app.py
+  103  ls -1
+  104  cd BIOINFO1_UNIX_data/
+  105  ls -1
+  106  cd ..
+  107  mv ~/BIOINFO1_UNIX_data/Agentic\ coding/ .
+  108  ls -1
+  109  mv ~/BIOINFO1_UNIX_data/rna-seq_lab/ .
+  110  which conda
+  111  conda activate r_env
+  112  ~/miniconda3/bin/conda init bash
+  113  ls ~/miniconda3/bin/conda
+  114  find /home/jobor -name "AGENT.md" -o -name "SPEC.md" -o -name "skills.md"
+  115  conda env list && which R && R --version
+  116  which R && R --version && find /home/jobor -name "*.R" -o -name "*.Rmd"
+  117  history | grep -i "R" | tail -n 20 && jupyter kernelspec list
+  118  ls -A /home/jobor | grep "^\."
+  119  ls -d /opt/*conda* 2>/dev/null
+  120  find /home/jobor -name ".Rprofile" -o -name ".Renviron" -o -name "*.R" -maxdepth 3
+  121  which R && R --version
+  122  which conda && conda info --envs
+  123  find /home/jobor -type f -executable -name "R" 2>/dev/null
+  124  ls -a /home/jobor/.bash_aliases
+  125  cd /home/jobor/rna_seq_lab
+  126  ls -l /home/jobor/rna_seq_lab/bio_env/bin/R /home/jobor/rna_seq_lab/bio_env/bin/Rscript 2>/dev/null
+  127  cd /home/jobor
+  128  find /home/jobor -name "renv.lock"
+  129  ls -d /home/jobor/miniconda3 2>/dev/null || ls -d /home/jobor/.miniconda3 2>/dev/null
+  130  find /home/jobor -name "conda" -type f -executable 2>/dev/null
+  131  ls -l /usr/bin/R /usr/local/bin/R 2>/dev/null
+  132  jupyter kernelspec list
+  133  grep -r "r_env" /home/jobor 2>/dev/null
+  134  ls -la /home/jobor
+  135  conda init
+  136  cd class
+  137  curl -k http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz | tra -xzf -
+  138  ls
+  139  curl -k http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz | tar -xzf 
+  140  ls
+  141  curl -k http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz | tar -xzf -
+  142  ls
+  143  cd class
+  144  curl -k http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz | tar -xzf -
+  145  curl -k http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz
+  146  ls
+  147  curl -Lk https://hyeshik.qbio.io:5001/binfo/vcontrol-20220204.tar.gz | tar -xzf -
+  148  curl -I -k -s https://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz
+  149  ls
+  150  curl -k -v http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz
+  151  curl -s -k http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz > test.txt && cat test.txt
+  152  curl -I -s http://hyeshik.qbio.io:5000/binfo/vcontrol-20220204.tar.gz
+  153  curl -I -k -m 3 -s https://hyeshik.qbio.io:5001/binfo/vcontrol-20220204.tar.gz
+  154  ls
+  155  curl -k http://hyeshik.qbio.io/binfo/vcontrol-20220204.tar.gz | tar -xzf -
+  156  ls
+  157  cd class
+  158  ls
+  159  git clone https://github.com/hyeshik/colab-biolab.git
+  160  git clone https://github.com/hyeshik/colab-biolab.git clone https://github.com/hyeshik/colab-biolab.git
+  161  cd class colab-biolab && bash tools/sestup.sh
+  162  cd class colab-biolab && bash tools/setup.sh
+  163  cd class colab-biolab && bash tools/sestup.sh class colab-biolab && bash tools/setup.sh
+  164  cd class colab-biolab && bash tools/setup.sh colab-biolab && bash tools/setup.sh
+  165  cd class
+  166  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  167  bash Miniconda3-latest-Linux-x86_64.sh
+  168  conda activates binfo1
+  169  conda activate binfo1
+  170  pip install scipy
+  171  pip install seaborn
+  172  # 1. 'binfo1'이라는 이름의 가상환경 생성 (Python 3.11)
+  173  conda create -n binfo1 python=3.11 -y
+  174  # 2. 환경 활성화
+  175  conda activate binfo1
+  176  # 3. 생물정보학 전용 채널 설정
+  177  conda config --add channels defaults
+  178  conda config --add channels bioconda
+  179  conda config --add channels conda-forge
+  180  # 4. 필수 도구(featureCounts 포함) 및 분석 라이브러리 설치
+  181  conda install -y subread pandas matplotlib numpy jupyterlab
+  182  conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+  183  conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+  184  # 1. 환경 생성
+  185  conda create -n binfo1 python=3.11 -y
+  186  # 2. 환경 활성화 (이제 정상적으로 작동할 거예요!)
+  187  conda activate binfo1
+  188  # 3. 채널 설정 (이미 하셨지만 확인 차 한 번 더)
+  189  conda config --add channels bioconda
+  190  conda config --add channels conda-forge
+  191  # 4. 필수 도구 설치
+  192  conda install -y subread pandas matplotlib numpy jupyterlab
+  193  featureCounts -v
+  194  # 1. 작업용 폴더 생성 및 이동
+  195  mkdir -p ~/binfo1-work
+  196  cd ~/binfo1-work
+  197  # 2. 시퀀싱 데이터팩 다운로드 및 즉시 압축 해제 (tar)
+  198  wget -O - --no-check-certificate https://hyeshik.qbio.io/binfo/binfo1-datapack1.tar | tar -xf -
+  199  mkdir -p ~/binfo1-work
+  200  cd ~/binfo1-work
+  201  cp /mnt/c/Users/본인계정명/jobor/binfo1-datapack1.tar .
+  202  cp /mnt/c/Users/jobor/binfo1-datapack1.tar .
+  203  ls /mnt/c/Users/jobor/Downloads/binfo*
+  204  sudo apt install unzip
+  205  unzip "/mnt/c/Users/jobor/Downloads/binfo1-datapack1-*.zip" -d ~/binfo1-work
+  206  cd ~/binfo1-work
+  207  ls -R
+  208  conda install -y subread
+  209  fueaturecounts -a gencode.gtf -o read-counts.txt *.bam
+  210  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  211  ls -R
+  212  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  213  cd binfo-datapack1
+  214  cd binfo1-datapack1
+  215  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  216  import pandas as pd
+  217  jupyter lab
+  218  cd~/binfo-work
+  219  cd ~/binfo-work
+  220  cd ~/binfo1-wokr
+  221  cd /home/jobor/binfo1-work
+  222  featureCounts -a gencode.gtf -o read-count.txt *.bam
+  223  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  224  conda activate binfo1
+  225  featureCounts -a gencode.gtf -o read-counts.txt */bam
+  226  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  227  wget -O - --no-check-certificate https://hyeshik.qbio.io/binfo/binfo1-datapack1.tar | tar -xf -
+  228  jupyter alb
+  229  jupyter lab
+  230  conda activate binfo1
+  231  cd /home/jobor/binfo1-work
+  232  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  233  ls -lh
+  234  cd bioinfo1-datapack1
+  235  cd ~/binfo1-datapack1
+  236  %cp -r /content/drive/MyDrive/binfo1-datapack1/* /content/drive/MyDrive/binfo1-work/
+  237  cd /home/jobor/binfo1-work/binfo1-datapack1
+  238  cp /home/jobor/binfo1-work/binfo1-datapack1/* /home/jobor/binfo1-work
+  239  cd ..
+  240  ls
+  241  featureCounts -a nedcode.gtf -o read-counts.txt */bam
+  242  featureCounts -a nedcode.gtf -o read-counts.txt *.bam
+  243  conda activate binfo1
+  244  featureCounts -a nedcode.gtf -o read-counts.txt *.bam
+  245  conda install -y subread
+  246  jupyter lab
+  247  git init
+  248  git remote add origin https://github.com/BoryeongJo/Bioinfo-2026#bioinfo-2026
+  249  mv "untitled.ipyb" "GM1.ipyn"
+  250  cd binfo1-datapack1
+  251  mv "untitled.ipynb"
+  252  mv "untitled.ipynb" ..
+  253  mv "Untitled.ipynb" ..
+  254  cd ..
+  255  mv "Untitled.ipynb" "GM1.ipynb"
+  256  ls
+  257  jupyter lab
+  258  cd ~/binfo-work
+  259  cd /home/jobor/binfo1-work
+  260  conda activate binfo1
+  261  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  262  jupyter lab
+  263  git init
+  264  git add
+  265  conda activate binfo1
+  266  cd /home/jobor/binfo1-work
+  267  git init
+  268  featureCounts -a gencode.gtf -o read-counts.txt *.bam
+  269  jupyter lab
+  270  git add .
+  271  git reset
+  272  git add "GM1.ipynb"
+  273  history > terminal_logs1.txt
